@@ -1,0 +1,39 @@
+<!--
+* Name: Alex Oladele
+* Date: 1/13/17
+* Course: CSE 270e
+* Assignment: Timer V4.0
+-->
+<head>
+    <script src="../public/js/loginForm.js"></script>
+    <link href="../public/css/loginForm.css" rel="stylesheet">
+</head>
+
+<br>
+<h2>Login to Timer</h2>
+{{#if errormsg}}
+    <div class="alert alert-danger"><strong>Error:</strong> Invalid Username or Password</div> {{/if}}
+<br>
+<form role="form" method="post" id="loginForm">
+    <div class="container">
+        <label for="username"><b>Username</b></label>
+
+        {{#if userid}}
+            <input type="text" class="form-control" placeholder="Enter Username" name="username" id="username"
+                   value={{userid}} required>
+        {{else}}
+            <input type="text" class="form-control" placeholder="Enter Username" name="username" id="username" required>
+        {{/if}}
+
+
+        <label for="password"><b>Password</b></label>
+
+        <input type="password" class="form-control" placeholder="Enter Password" name="password" id="password" required>
+
+        <button id="loginBtn" type="submit">Login</button>
+    </div>
+    <div class="container" id="registerCnt" style="background-color:#f1f1f1">
+        <span class="register"><a href="/register">Register New Account</a></span>
+    </div>
+</form>
+<br>

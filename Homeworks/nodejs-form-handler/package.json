@@ -1,0 +1,25 @@
+{
+  "name": "express_test",
+  "version": "1.0.1",
+  "description": "Building a fake imgur site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alex Oladele",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.5.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-sessions": "^1.0.6",
+    "method-override": "^2.3.7",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "multer": "^1.2.1"
+  },
+  "devDependencies": {}
+}

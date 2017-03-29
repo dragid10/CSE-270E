@@ -1,0 +1,60 @@
+<!--
+* Name: Alex Oladele
+* Date: 1/17/17
+* Course: CSE 270e
+* Assignment: Timer V4.0
+-->
+
+<head>
+    <script src="../public/js/registerForm.js"></script>
+    <link href="../public/css/loginForm.css" rel="stylesheet">
+</head>
+
+<!--<br>-->
+<h2>Register For Timer</h2>
+{{#if errormsg}}
+    <div class="alert alert-danger"><strong>Error:</strong> {{errormsg}} </div> {{/if}}
+
+<br>
+<form role="form" method="post" id="loginForm">
+    <div class="container">
+        <br>
+        <label for="username"><b>Username</b></label>
+
+        <!-- Username Field -->
+        {{#if userid}}
+            <input type="text" class="form-control" placeholder="Enter Username" name="username" id="username"
+                   value={{userid}} data-toggle="tooltip"
+                   title="Username Should Not Contain spaces" required>
+        {{else}}
+            <input type="text" class="form-control" placeholder="Enter Username" name="username" id="username"
+                   data-toggle="tooltip"
+                   title="Username Should Not Contain spaces" required>
+        {{/if}}
+
+        <!-- Password Field -->
+        <label for="password"><b>Password</b></label>
+
+        <input type="password" class="form-control" placeholder="Enter Password" name="password" id="password"
+               data-toggle="tooltip"
+               title="Password Should Not Contain spaces" required>
+
+        <!-- Password Field 2 -->
+        <label for="password-again"><b>Re-enter Password</b></label>
+
+        <input type="password" class="form-control" placeholder="Re-enter Password" name="password-again"
+               data-toggle="tooltip"
+               title="Password Should Not Contain spaces" id="password2"
+               required>
+
+        <!-- Email Field -->
+        <label for="email"><b>Email</b></label>
+
+        <input type="email" class="form-control" placeholder="Enter email" data-toggle="tooltip"
+               title="Email Should Not Contain spaces" name="email" id="email">
+
+        <!-- Register Button -->
+        <button id="loginBtn" type="submit">Register</button>
+    </div>
+</form>
+<br>

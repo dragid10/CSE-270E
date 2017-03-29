@@ -1,0 +1,46 @@
+/**
+ * Name: Alex Oladele
+ * Date: 1/15/17
+ * Course CSE 270e
+ * Assignment: Timer V4.0
+ */
+
+/* ROOT */
+label {
+    display: block;
+    text-align: center;
+}
+
+button {
+    display: block;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* IDS */
+
+/* CLASSES */
+
+.timers {
+    text-align: center;
+}
+
+.centered {
+    margin: auto;
+    max-width: 210px;
+}

@@ -1,0 +1,100 @@
+<!--
+* Name: Alex Oladele
+* Date: 1/13/17
+* Course: CSE 270e
+* Assignment: Timer V4.0
+-->
+<head>
+    <link href="../public/css/timer.css" rel="stylesheet">
+</head>
+
+{{#if loginid}}
+    <div class="container">
+        <div class="row">
+
+            <!-- First Box -->
+            <div class="col-xs-4 timers" id="timer1">
+                <div class="form-group">
+                    <label for="timername">Timer Name</label>
+                    <input type="text" class="form-control timername" name='timername' data-toggle="tooltip"
+                           title="Enter the name of the timer">
+                </div>
+                <hr>
+                <section class="centered">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="number" class="col-xs-4 hours" id="hrs1" placeholder="0" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 9">
+                            <input type="number" class="col-xs-4 minutes" placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                            <input type="number" class="col-xs-4 seconds"
+                                   placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                        </div>
+                    </div>
+                </section>
+                <span class='timerdone'>Done at: <span class="timerdonetime"></span></span>
+                <hr>
+                <button type="button" class="btn btn-js btn-success">Start</button>
+            </div>
+
+            <!-- Second Box -->
+            <div class="col-xs-4 timers" id="timer2">
+                <div class="form-group">
+                    <label for="timername">Timer Name</label>
+                    <input type="text" class="form-control timername" name='timername' data-toggle="tooltip"
+                           title="Enter the name of the timer">
+                </div>
+                <hr>
+                <section class="centered">
+                    <div class="row ">
+                        <div class="form-group">
+                            <input type="number" class="col-xs-4 hours" id="hrs2" placeholder="0" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 9">
+                            <input type="number" class="col-xs-4 minutes" placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                            <input type="number" class="col-xs-4 seconds"
+                                   placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                        </div>
+                    </div>
+                </section>
+                <span class='timerdone'>Done at: <span class="timerdonetime"></span></span>
+                <hr>
+                <div class="buttons">
+                    <button type="button" class="btn btn-js btn-success">Start</button>
+                </div>
+            </div>
+
+            <!-- Third Box -->
+            <div class="col-xs-4 timers" id="timer3">
+                <div class="form-group">
+                    <label for="timername">Timer Name</label>
+                    <input type="text" class="form-control timername" name='timername' data-toggle="tooltip"
+                           title="Enter the name of the timer">
+                </div>
+                <hr>
+                <section class="centered">
+                    <div class="row ">
+                        <div class="form-group">
+                            <input type="number" class="col-xs-4 hours" placeholder="0" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 9">
+                            <input type="number" class="col-xs-4 minutes" placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                            <input type="number" class="col-xs-4 seconds"
+                                   placeholder="00" data-toggle="tooltip"
+                                   title="Enter a number between 0 and 59">
+                        </div>
+                    </div>
+                </section>
+                <span class='timerdone'>Done at: <span class="timerdonetime"></span></span>
+                <hr>
+                <div class="buttons">
+                    <button type="button" class="btn btn-js btn-success">Start</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/if}}
+<script src="/socket.io/socket.io.js"></script>

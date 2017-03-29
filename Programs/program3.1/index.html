@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program 3.1</title>
+    <script>
+        // function run() {
+        freq = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        function rollDice() {
+            var i, roll1 = 0, roll2 = 0, rollCount, minNum = 1, maxNum = 13, rollTotal;
+
+            function addFreq(num) {
+                var div;
+                switch (num) {
+                    case 2:
+                        freq[0] += 1;
+                        break;
+                    case 3:
+                        freq[1] += 1;
+                        break;
+                    case 4:
+                        freq[2] += 1;
+                        break;
+                    case 5:
+                        freq[3] += 1;
+                        break;
+                    case 6:
+                        freq[4] += 1;
+                        break;
+                    case 7:
+                        freq[5] += 1;
+                        break;
+                    case 8:
+                        freq[6] += 1;
+                        break;
+                    case 9:
+                        freq[7] += 1;
+                        break;
+                    case 10:
+                        freq[8] += 1;
+                        break;
+                    case 11:
+                        freq[9] += 1;
+                        break;
+                    default:
+                        console.log("Hit default statement. Something went wrong somewhere");
+                }
+            }
+
+            rollCount = prompt("How many times would you like to roll the dice?");
+
+            for (i = 0; i < rollCount; i++) {
+                roll1 = Math.floor(Math.random() * (maxNum - minNum) + minNum);
+                roll2 = Math.floor(Math.random() * (maxNum - minNum) + minNum);
+                rollTotal = roll1 + roll2;
+                addFreq(rollTotal);
+            }
+
+            for (var j = 0; j <= freq.length; j++) {
+                var cntList = document.getElementById("'" + j + 2 + "'");
+                cntList.innerHTML = freq[j];
+            }
+        }
+        // }
+
+    </script>
+</head>
+
+<body>
+
+<button onclick="rollDice()">Click here to start rolling some dice!</button>
+<div id="numDiv">
+    <h3> Number: </h3>
+    <ul>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+</div>
+<div id="cntDiv">
+    <h3> CNT: </h3>
+    <ul>
+        <li id="2"></li>
+        <li id="3"></li>
+        <li id="4"></li>
+        <li id="5"></li>
+        <li id="6"></li>
+        <li id="7"></li>
+        <li id="8"></li>
+        <li id="9"></li>
+        <li id="10"></li>
+        <li id="11"></li>
+        <li id="12"></li>
+    </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+/**
+* Name: Alex Oladele
+* Date: 1/13/17
+* Course: CSE 270e
+ */
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: mintcream;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/* Classes */
+
+.row > div {
+    margin-top: 10px;
+    padding: 20px;
+    outline: 2px solid #ccc;
+    outline-offset: -10px;
+    -moz-outline-radius: 10px;
+    -webkit-outline-radius: 10px;
+    display: inline-block;
+}
+
+/* IDS */
+#tagDiv {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    height: 65px;
+    width: 99%;
+}
+

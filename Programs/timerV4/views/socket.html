@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>  </head>
+<body>
+socket listening
+<script>
+    var socket = io.connect();
+    socket.on('date', function(data){
+        $('#date').text(data.date);
+        $('#cnt').text(data.cnt);
+    });
+</script>
+<div id="date">date should go here</div>
+<div id="cnt">cnt should go here</div>
+</body>
+</html>
